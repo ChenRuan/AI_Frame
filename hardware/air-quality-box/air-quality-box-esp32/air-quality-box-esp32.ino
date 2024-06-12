@@ -2,7 +2,7 @@
 #include <ezTime.h>
 #include <PubSubClient.h>
 #include <Wire.h>
-
+#include <DHT.h>
 
 // wifi module
 #include "arduino_secrets.h" 
@@ -39,6 +39,20 @@ char luxStr[10];
 #define SDAPin 0
 #define SCLPin 4
 
+// DHT Module
+#define DHTPIN 25
+#define DHTTYPE DHT22
+DHT dht(DHTPIN, DHTTYPE);
+float temperature = 0;
+float humidity = 0;
+char tempStr[10];
+char humStr[10];
+
+// RainDetectModule
+#define RAINDETECTPIN 34
+int rainDetectValue = 0;
+char rainStr[10];
+
 // Date and time
 Timezone GB;
 
@@ -48,7 +62,8 @@ void setup() {
   delay(100);
   startWifi();
   syncDate();
-
+  dht.begin();
+  pinMode(RAINDETECTPIN, INPUT);
   //start MQTT server
   client.setServer(mqtt_server, 1884);
   client.setCallback(callback);
@@ -72,6 +87,16 @@ void loop() {
     readLux();
     dtostrf(lux, 0, 0, luxStr);
     sendMQTT(topic_1,"lux",luxStr);
+
+    readDHT22();
+    dtostrf(temperature, 0, 1, tempStr);
+    sendMQTT(topic_1,"temp",tempStr);
+    dtostrf(humidity, 0, 1, humStr);
+    sendMQTT(topic_1,"hum",humStr);
+
+    readRainDetector();
+    dtostrf(rainDetectValue, 0, 0, rainStr);
+    sendMQTT(topic_1,"rain",rainStr);
   }
 }
 
@@ -79,9 +104,19 @@ void blink(){
   windSpeedPluse++;
 }
 
+void readDHT22(){
+  temperature = dht.readTemperature();
+  humidity = dht.readHumidity();
+  Serial.print("Temp:");
+  Serial.println(temperature,2);
+  Serial.print("Humidity:");
+  Serial.println(humidity,2);
+}
+
 void readWindSpeed(){
   unsigned long detectInterval = currentMillis - windSpeedDetectLastTime;
   windSpeed =  windSpeedPluse *1000.0 * 1.75 / detectInterval / 40 ;
+  Serial.print("Wind speed:");
   Serial.println(windSpeed,2);
   windSpeedDetectLastTime = millis();
   windSpeedPluse = 0;
@@ -102,7 +137,14 @@ void readLux(){
     lux = (highByte << 8) | lowByte; // 将高字节和低字节组合成16位数值
     lux = lux / 1.2; // 根据数据手册进行转换
   }
+  Serial.print("lux:");
   Serial.println(lux);
+}
+
+void readRainDetector(){
+  rainDetectValue = analogRead(RAINDETECTPIN);
+  Serial.print("rain value:");
+  Serial.println(rainDetectValue);
 }
 
 void startWifi() {
@@ -117,6 +159,7 @@ void startWifi() {
     delay(500);
     Serial.println(".");
   }
+  
   Serial.println("");
   Serial.println("WiFi connected");
   Serial.print("IP address: ");
