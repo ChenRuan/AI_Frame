@@ -4,7 +4,6 @@
 The Weather Station is designed to monitor various environmental conditions, including temperature, humidity, wind speed, and light intensity. The data collected is transmitted to an MQTT server for further processing and visualization.
 
 ## System Components
-![image](https://github.com/user-attachments/assets/cb40ecc2-dc8a-42be-8488-0ff9b621ad1b)
 
 - **Arduino Nano ESP32**: Handles sensor data collection and Wi-Fi communication.
 - **DHT22 Sensor**: Measures temperature and humidity.
@@ -29,6 +28,8 @@ The Weather Station is designed to monitor various environmental conditions, inc
 PCB design is also provided as a garber file.
 
 ## Enclosure 
+
+![image](https://github.com/user-attachments/assets/ca384b1a-2720-4938-85bf-3ff24d757ec1)
 
 The enclosure for the Weather Station is designed to protect the internal components from environmental elements while allowing adequate ventilation for the sensors. All related files can be found in the enclosure folder. This includes:
 
