@@ -35,10 +35,10 @@ Measures indoor air quality by detecting harmful gases and environmental conditi
 
 To begin using the system, please refer to the detailed setup instructions provided for each component:
 
-- [Weather Station Setup]("Weather%20Station/README.md")
-- [Detection Box Setup]("Portable%20Detection%20Box/README.md")
-- [Air Quality Box Setup]("Air%20Quality%20Box/README.md")
-- [Raspberry Pi Setup]("Raspberry%20Pi/README.md")
+- [Weather Station Setup](Weather%20Station/README.md)
+- [Detection Box Setup](Portable%20Detection%20Box/README.md)
+- [Air Quality Box Setup](Air%20Quality%20Box/README.md)
+- [Raspberry Pi Setup](Raspberry%20Pi/README.md)
 
 ## License
 
