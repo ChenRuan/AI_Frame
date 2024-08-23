@@ -29,7 +29,7 @@ Deploying the system involves setting up the sensor devices in their respective 
 
 To get started, follow the instructions in each component's README file:
 
-- [Weather Station Setup](Weather_Station/README.md)
-- [Detection Box Setup](Portable_Detection_Box/README.md)
-- [Air Quality Box Setup](Air_Quality_Box/README.md)
-- [Raspberry Pi Setup](Raspberry_pi/README.md)
+- [Weather Station Setup](Weather-Station/README.md)
+- [Detection Box Setup](Portable-Detection_Box/README.md)
+- [Air Quality Box Setup](Air-Quality-Box/README.md)
+- [Raspberry Pi Setup](Raspberry-pi/README.md)
