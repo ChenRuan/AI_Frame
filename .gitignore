@@ -1,2 +1,3 @@
 
 hardware/air-quality-box/air-quality-box-esp32/arduino_secrets.h
+*.h

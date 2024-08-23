@@ -1,4 +1,0 @@
-source /home/Chen/flaskApp/bin/activate
-
-cd /home/Chen/flaskApp/python
-
