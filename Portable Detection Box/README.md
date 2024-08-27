@@ -28,7 +28,7 @@ The Portable Detection Box has a custom-designed enclosure that houses all compo
 ## Code Deployment
 
 1. Install the necessary libraries for the ESP8266, including Wi-Fi and MQTT libraries.
-2. Upload the provided code to the ESP12E microcontroller.
+2. Upload the provided code to the ESP12E microcontroller. Don't forget to replace username, password, mqtt server, etc.
 3. Refer to the diagram below for the code flow
 ![image](https://github.com/user-attachments/assets/d3ce5936-c41b-4967-a195-8926441be1e9)
 
