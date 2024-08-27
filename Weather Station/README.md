@@ -26,6 +26,7 @@ The Weather Station is designed to monitor various environmental conditions, inc
 4. Wire the Solar Power Module to power the Arduino.
 
 PCB design is also provided as a garber file.
+
 ![image](https://github.com/user-attachments/assets/52c491bb-f25e-422c-8a84-0f7dc26933c7)
 ![image](https://github.com/user-attachments/assets/1bf35f7d-adb1-4ae7-886e-966e86b45fff)
 
