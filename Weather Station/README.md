@@ -26,6 +26,9 @@ The Weather Station is designed to monitor various environmental conditions, inc
 4. Wire the Solar Power Module to power the Arduino.
 
 PCB design is also provided as a garber file.
+![image](https://github.com/user-attachments/assets/52c491bb-f25e-422c-8a84-0f7dc26933c7)
+![image](https://github.com/user-attachments/assets/1bf35f7d-adb1-4ae7-886e-966e86b45fff)
+
 
 ## Enclosure 
 
@@ -40,8 +43,8 @@ The enclosure for the Weather Station is designed to protect the internal compon
 
 ![image](https://github.com/user-attachments/assets/c8a0f0ec-58e5-45ee-a3df-727f42430448)
 
-1. Install the required Arduino libraries: `DHT sensor library`, `Adafruit Unified Sensor`, and `BH1750`.
-2. Upload the provided code to the Arduino Nano ESP32.
+1. Install the required Arduino libraries: `DHT sensor library`, `Adafruit Unified Sensor`, `BH1750`, etc..
+2. Upload the provided code to the Arduino Nano ESP32. Don't forget to replace username, password, mqtt server, etc.
 3. Ensure that the device connects to your Wi-Fi and begins transmitting data to the MQTT server.
 
 ## Deployment
