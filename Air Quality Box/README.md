@@ -26,8 +26,3 @@ The Air Quality Box is designed to monitor indoor air quality by measuring vario
 ## Usage
 Once powered, the Air Quality Box will automatically begin monitoring the indoor environment, sending real-time data on air quality to the MQTT server for further analysis.
 
-## Troubleshooting
-- **No Data Transmission**: Check the Wi-Fi credentials and MQTT server connection.
-- **Sensor Errors**: Verify that the sensors are correctly connected and receiving power.
-- **Inaccurate Readings**: Ensure the sensors are placed in a location with adequate airflow and are not obstructed.
-
