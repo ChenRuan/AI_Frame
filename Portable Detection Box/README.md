@@ -5,7 +5,7 @@ The Portable Detection Box is designed to monitor human movement within specific
 ![image](https://github.com/user-attachments/assets/9c27de31-ebd9-434b-a057-a8d88b5486e7)
 
 ## System Components
-- **ESP12E (ESP8266)**: The main microcontroller unit that handles sensor data and Wi-Fi communication.
+- **ESP8266**: The main microcontroller unit that handles sensor data and Wi-Fi communication.
 - **PIR Motion Sensor (HC-SR501)**: Detects human motion within a certain range and sends signals to the ESP8266.
 - **LED Indicators**: Visual indicators for device status (operation and motion detection).
 - **3-Slot AA Battery Holder**: Provides power to the system, making it portable.
@@ -17,9 +17,9 @@ The Portable Detection Box has a custom-designed enclosure that houses all compo
 ![image](https://github.com/user-attachments/assets/e5e2a24f-4245-41b4-8281-7cd11d35a020)
 
 ## Circuit Setup
-1. Connect the PIR sensor to the ESP12E as specified in the circuit diagram.
-2. Attach the LED indicators to the designated GPIO pins on the ESP12E.
-3. Connect the battery holder to the ESP12E to supply power.
+1. Connect the PIR sensor to the ESP8266 as specified in the circuit diagram.
+2. Attach the LED indicators to the designated GPIO pins on the ESP8266.
+3. Connect the battery holder to the ESP8266 to supply power.
 4. Ensure that the custom PCB is used to minimize space and optimize connections.
    
 ![image](https://github.com/user-attachments/assets/e7dea442-e292-4dd7-a24e-7bb1eb60af4e)
