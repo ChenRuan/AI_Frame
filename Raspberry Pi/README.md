@@ -51,13 +51,15 @@ The Raspberry Pi and related components are housed in a custom enclosure designe
 2. **Install Required Libraries**:
    ```
    sudo apt-get install python3 python3-pip
-   bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered)
-   sudo systemctl enable nodered.service
    pip3 install requests pandas openai pillow configparser
    sudo apt-get install python3-gpiozero
    sudo apt-get install python3-rpi.gpio python3-spidev python3-pip python3-pil python3-numpy python3-smbus
    sudo apt-get install python3-pil python3-pil.imagetk
+   ...
    ```
+   
+   Please download other libraries as needed.
+   
 ### 3. Data Processing
 
 ![image](https://github.com/user-attachments/assets/41bafbcf-a15a-4e0e-9d1b-d1a8801308ce)
